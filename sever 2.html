@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funny Hacker Server</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            margin: 0;
+            font-family: monospace;
+        }
+        .code-container {
+            display: flex;
+            flex-direction: row;
+        }
+        .code-column {
+            background-color: #000;
+            color: #00ff00;
+            flex: 1;
+            padding: 20px;
+            white-space: pre-wrap;
+            overflow: auto;
+        }
+        .console {
+            background-color: #000;
+            color: #00ff00;
+            margin-top: 20px;
+            padding: 20px;
+            max-height: 300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="code-container">
+        <div class="code-column">
+            <span style="color: #ff0000;">var</span> canvas = document.querySelector(".hacker-3d-shiz"),
+            ctx = canvas.getContext("2d"),
+            canvasBars = document.querySelector(".bars-and-stuff"),
+            ctxBars = canvasBars.getContext("2d"),
+            outputConsole = document.querySelector(".output-console");
+
+            canvas.width = (window.innerWidth/3)*2;
+            canvas.height = window.innerHeight / 3;
+
+            canvasBars.width = window.innerWidth/3;
+            canvasBars.height = canvas.height;
+
+            outputConsole.style.height = (window.innerHeight / 3) * 2 + 'px';
+            outputConsole.style.top = window.innerHeight / 3 + 'px';
+
+            // More code lines...
+        </div>
+        <div class="code-column">
+            // Even more code lines...
+
+        </div>
+        <div class="code-column">
+            // And more code lines...
+
+        </div>
+    </div>
+    <div class="console" id="output-console">
+        <p>// Funny Hacker Server Console:</p>
+        <!-- Console output will be appended here -->
+    </div>
+
+    <script>
+        // Simulate console output
+        function consoleOutput() {
+            var consoleEl = document.getElementById("output-console");
+            var textEl = document.createElement('p');
+            textEl.textContent = "Executing command: " + getRandomCommand();
+            consoleEl.appendChild(textEl);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+            setTimeout(consoleOutput, Math.random() * 3000);
+        }
+
+        function getRandomCommand() {
+            var commands = [
+                "decrypting mainframe",
+                "initiating cyber dance sequence",
+                "calculating pizza delivery time",
+                "hacking the planet",
+                "debugging the universe",
+                "running infinite loop...",
+                "hiding Easter eggs",
+                "unleashing the LOLcats",
+                "initiating meme generator",
+                "playing Rick Astley...",
+                "summoning Cthulhu",
+                "fizzbuzzing",
+            ];
+            return commands[Math.floor(Math.random() * commands.length)];
+        }
+
+        consoleOutput();
+    </script>
+</body>
+</html>
